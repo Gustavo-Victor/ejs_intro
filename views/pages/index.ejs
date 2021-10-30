@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<!--head-->
+<%- include('../parties/head'); %>
+
+    <body class="container">
+        <!--header-->
+        <%- include('../parties/header'); %>
+
+            <!--main-->
+            <main>
+                <div id="main-div" class="container-fluid bg-secondary text-light">
+                    <h1>Node com EJS</h1>
+                    <p>Vamos aprender a trabalhar com arquivos EJS</p>
+                    <p><%= subtitle %></p>
+                </div>
+
+                <!--Lista de itens com laço de repetição em ejs-->
+                <ul id="lista-itens" class="bg-dark text-light">
+                <% things.forEach((item) => { %>                    
+                    <li><strong><%= item.title %> </strong> <%= item.message %></li>                                            
+                <% }); %>
+                </ul>
+            </main>
+
+            <!--footer-->
+            <%- include('../parties/footer'); %>
+    </body>
+
+</html>
